@@ -7,6 +7,7 @@ import Header from "./components/header";
 const Home = lazy(() => import("./pages/home"));
 const Search = lazy(() => import("./pages/search"));
 const Cart = lazy(() => import("./pages/cart"));
+const Shipping = lazy(() => import("./pages/shipping"));
 
 //Admin routes
 const Dashboard = lazy(() => import("./pages/admin/dashboard"));
@@ -38,6 +39,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
           <Route path="/cart" element={<Cart />} />
+          {/* Logged in User Routes - the routes that can be accessed only by logged in user */}
+          <Route path="/shipping" element={<Shipping />} />
           //Admin Routes
           {/* Protected route make sures that no else than admin can go to that routes  */}
           {/* <Route
